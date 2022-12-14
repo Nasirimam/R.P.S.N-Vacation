@@ -1,0 +1,35 @@
+#navbar {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    font-size: 20px;
+    z-index: 99;
+}
+
+#navbar>div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navSearch {
+    margin-left: -200px;
+    border-radius: 2px;
+    font-size: 20px;
+}
+#navbar:hover{
+    background-color: rgb(255, 255, 0);
+    color: rgb(206, 11, 11);
+}
+@media (max-width) {
+    .navSearch {
+        display: none;
+    }
+}

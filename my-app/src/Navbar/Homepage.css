@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #banner {
+    width: 100%;
+    height: 340px;
+  }
+  #banner + div{
+    width: 40%;
+    left: 30%;
+    top:35%;
+    /* border: 1px solid red; */
+    text-align: center;
+  }
+  #luftansa {
+    /* border: 1px solid; */
+    height: auto;
+    width: 55%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  
+  /* Home1 */
+  
+  #home1_A {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    /* border: 1px solid; */
+    gap: 10px;
+    align-items: center;
+    width: 76%;
+  }
+  
+  #home1_A img {
+    height: 75px;
+    /* border: 1px solid silver; */
+  }
+  
+  /* Tourism */
+  
+  #tour-flex {
+    display: grid;
+    width: 75%;
+    margin: auto;
+    /* border: 1px solid; */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  #tour-flex > div {
+    /* width: 23%; */
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #tour-flex div img {
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  #tour-flex div h4 {
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  
+  /* Traveller */
+  
+  #traveller-flex {
+    /* border: 1px solid; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+    margin-bottom: 70px;
+  }
+  
+  #traveller-flex > div {
+    /* border: 1px solid silver; */
+    border-radius: 5px;
+    /* padding: 10px; */
+  }
+  
+  #traveller-flex > div img {
+    border-radius: 10px;
+    height: 180px;
+    width: 100%;
+  }
+  
+  #traveller-flex > div > h4 {
+    font-size: 17px;
+  }
+  
+  /* Spotlight */
+  
+  #spot-flex {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 70px;
+  }
+  
+  #spot-flex-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+  
+  
+  
+  #spot-flex-2 div img {
+    border-radius: 5px;
+    height: 95%;
+    width: 100%;
+  }
+  
+  /* Carousel */
+  
+  .carousel-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content-div img {
+    height: 170px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  #carousel-parent {
+    width: 90%;
+    margin: auto;
+    height: auto;
+  }
+  
+  .content-div > h5 {
+    font-size: 13px;
+    color: rgb(215, 143, 9);
+  }
+  
+  .content-div > h4 {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+  
+  
+  .carousel-wrapper-country img {
+    height: 320px;
+    border-radius: 5px;
+    
+  }
+  
+  .rec.rec-arrow {
+    background-color: white;
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    /* width: 10px; */
+    /* border: 1px solid red; */
+  }
+  
+  .rec.rec-arrow:hover {
+    background: rgb(164, 209, 249);
+  }
+  
+  #suggestion::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media all and (min-width: 100px) and (max-width: 500px) {
+    #home1_A,
+    #spot-flex-2,
+    #tour-flex,
+    #traveller-flex {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+    }
+  
+    .content-div > h5 {
+      font-size: 10px;
+    }
+  
+    .content-div > h4 {
+      font-size: 12px;
+    }
+  
+    #carousel-parent > h3{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    /* #spot-flex img{
+  
+    } */
+  
+    #middlepart_p{
+      font-size: 16px;
+    }
+    #banner + div{
+      width: 90%;
+      left: 5%;
+      top:35%;
+    }
+  }
+  
