@@ -1,9 +1,16 @@
+
+import Signup from "./Components/Signup"
+import Login from "./Components/Login"
+import './App.css';
+
 import "./App.css";
 import "./App.css";
 import { Navbar } from "./Navbar/Navbar";
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./Navbar/HamburgerMenu";
 import Homepage from "./Navbar/Home";
+
+
 
 
 function App() {
@@ -20,8 +27,13 @@ function App() {
   }, []);
   return (
     <div className="App">
+
+    <Signup/>
+    <Login/>
+
       {ham ? <HamburgerMenu /> : <Navbar />}
       < Homepage/>
+
     </div>
   );
 }
