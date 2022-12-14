@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./App.css";
+import { Navbar } from "./Navbar/Navbar";
+import { useEffect, useState } from "react";
+import HamburgerMenu from "./Navbar/HamburgerMenu";
+import Homepage from "./Navbar/Home";
+
 
 function App() {
+  const [ham, setHam] = useState(false);
+  const changeNav = () => {
+    if (window.innerWidth < 500) {
+      setHam(true);
+    } else {
+      setHam(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize",changeNav)
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {ham ? <HamburgerMenu /> : <Navbar />}
+      < Homepage/>
     </div>
   );
 }
