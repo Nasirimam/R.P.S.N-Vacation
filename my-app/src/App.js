@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar/Navbar";
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./Navbar/HamburgerMenu";
 import Homepage from "./Navbar/Home";
+import Footer from "./Footer/Footer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
       {ham ? <HamburgerMenu /> : <Navbar />}
       < Homepage/>
+      <Footer/>
     </div>
   );
 }
