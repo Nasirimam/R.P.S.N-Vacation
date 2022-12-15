@@ -15,7 +15,7 @@ const Beach = () => {
   const [vlogData, setVlogData] = useState([]);
   useEffect(() => {
     axios
-      .get(" http://localhost:8080/hotels")
+      .get(" https://persian-blue-hen-slip.cyclic.app/hotels")
       .then((res) => {
         setBeachgrid(res.data);
         setVlogData(res.data);

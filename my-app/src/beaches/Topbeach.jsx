@@ -9,7 +9,7 @@ const Topbeach = () => {
   const [topBeach, setTopBeach] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/india")
+      .get("https://persian-blue-hen-slip.cyclic.app/india")
       .then((res) => {
         setTopBeach(res.data);
       });

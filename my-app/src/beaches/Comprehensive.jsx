@@ -11,7 +11,7 @@ const Comprehensive = () => {
   const [packag, setPackage] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/Comprehensive")
+      .get("https://persian-blue-hen-slip.cyclic.app/Comprehensive")
       .then((res) => {
         setPackage(res.data);
       });

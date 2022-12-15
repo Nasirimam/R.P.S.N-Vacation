@@ -11,7 +11,7 @@ const Package = () => {
   const [packag, setPackage] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/Package")
+      .get("https://persian-blue-hen-slip.cyclic.app/Package")
       .then((res) => {
         setPackage(res.data);
         console.log(res.data)
