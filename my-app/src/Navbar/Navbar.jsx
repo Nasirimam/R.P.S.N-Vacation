@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ShowContext } from "../Context/Context";
+import { ShowContext } from "../Context/ShowContext";
 import styles from "./Navbar.module.css";
 import image from "../Logo/rb.jpg"
 export function Navbar() {
