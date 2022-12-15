@@ -2,7 +2,8 @@
 
 import './App.css';
 import HomePage from './Home_Page/Main_Page';
-
+import Signup from "./Components/Signup"
+import Login from './Components/Login';
 
 import "./App.css";
 import "./App.css";
@@ -28,13 +29,11 @@ function App() {
   }, []);
   return (
     <div className="App">
+      {/* {ham ? <HamburgerMenu /> : <Navbar />}
+      < Homepage/> */}
 
-
-    <Signup/>
+      <Signup/>
     <Login/>
-
-      {ham ? <HamburgerMenu /> : <Navbar />}
-      < Homepage/>
 
     </div>
   );

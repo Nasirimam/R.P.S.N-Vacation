@@ -1,8 +1,8 @@
 import { Box, Heading, Input, Text } from "@chakra-ui/react";
 import React, { useContext, useEffect, useState } from "react";
-import { ShowContext } from "../Context/Context";
+import { ShowContext } from "../Context/ShowContext";
 import "./Homepage.css";
-import  {Countries}  from "./Countries";
+import { Countries } from "./Countries";
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
@@ -15,16 +15,16 @@ const Homepage = () => {
         setResults(e.target.value);
     };
 
-      useEffect(() => {
+    useEffect(() => {
         if (result === "") {
-          setData([]);
+            setData([]);
         } else {
-          let show_data = Countries.filter((item) => {
-            return item.country.toLowerCase().indexOf(result) !== -1 ? true : false;
-          });
-          setData(show_data);
+            let show_data = Countries.filter((item) => {
+                return item.country.toLowerCase().indexOf(result) !== -1 ? true : false;
+            });
+            setData(show_data);
         }
-      }, [result]);
+    }, [result]);
     // console.log(data)
 
     return (
@@ -64,7 +64,7 @@ const Homepage = () => {
                 </Box>
             </Box>
             <br />
-     {/* here import home part down part */}
+            {/* here import home part down part */}
         </div>
     );
 };

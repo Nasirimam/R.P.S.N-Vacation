@@ -58,7 +58,7 @@ function Login() {
         setIsAuth(true);
         alert("LogIn Successful !");
       })
-      .then((error) => {});
+      .then((error) => { });
   };
 
   return (
@@ -94,7 +94,7 @@ function Login() {
           </Button>
 
           <Button
-            backgroundColor="white"
+            backgroundColor="blue.600"
             fontWeight="500"
             letterSpacing="0.6px"
             fontFamily="sans-serif"
@@ -111,7 +111,7 @@ function Login() {
           <ModalCloseButton />
           <ModalBody pb={6} fontSize="14px">
             <FormControl>
-              <FormLabel>Email</FormLabel>
+              <FormLabel color="blackAlpha.900" >Email</FormLabel>
               <Input
                 ref={initialRef}
                 type="email"
@@ -121,7 +121,7 @@ function Login() {
             </FormControl>
 
             <FormControl mt={4}>
-              <FormLabel>Password</FormLabel>
+              <FormLabel color="blackAlpha.900">Password</FormLabel>
               <Input
                 type="password"
                 placeholder="Enter password"
@@ -147,6 +147,7 @@ function Login() {
             alignItems={"center"}
             gap="5px"
             justifyContent={"center"}
+            color="blackAlpha.900"
           >
             Don't have an account? <Signup />
           </Box>

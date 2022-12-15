@@ -13,7 +13,7 @@ import {
 import React, { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
-import { ShowContext } from "../Context/Context";
+import { ShowContext } from "../Context/ShowContext";
 
 function HamburgerMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure();

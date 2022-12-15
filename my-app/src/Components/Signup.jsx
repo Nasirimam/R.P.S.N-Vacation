@@ -107,7 +107,7 @@ const Signup = () => {
           </Button>
 
           <Button
-            backgroundColor="white"
+            backgroundColor="blue.400"
             fontWeight="500"
             letterSpacing="0.6px"
             fontFamily="sans-serif"
@@ -118,16 +118,16 @@ const Signup = () => {
             onClick={signInWithGoogle}
           >
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
-            Log in with google 
+            Log in with google
           </Button>
           <Box textAlign="center">OR</Box>
 
           <ModalCloseButton />
 
           <ModalBody pb={6}>
-          
+
             <FormControl mt={4}>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel color="blackAlpha.900">Full Name</FormLabel>
               <Input
                 type="text"
                 placeholder="Full Name"
@@ -136,7 +136,7 @@ const Signup = () => {
             </FormControl>
 
             <FormControl mt={4}>
-              <FormLabel>Enter Email Address</FormLabel>
+              <FormLabel color="blackAlpha.900">Enter Email Address</FormLabel>
               <Input
                 type="email"
                 placeholder="Enter Email"
@@ -145,7 +145,7 @@ const Signup = () => {
             </FormControl>
 
             <FormControl mt={4}>
-              <FormLabel>Enter Password</FormLabel>
+              <FormLabel color="blackAlpha.900">Enter Password</FormLabel>
               <Input
                 type="password"
                 placeholder="Enter Password"
@@ -159,16 +159,18 @@ const Signup = () => {
             </Button>
           </ModalFooter>
           <Box
-           textAlign="center"
+            textAlign="center"
             fontsize="5px"
             gap="5px"
-            color="gray"
+            // color="gray"
             alignItems={"center"}
             justifyContent={"center"}
             margin="auto"
-            
+            color="blackAlpha.900"
+
+
           >
-            By signng up , you agree to R.P.S.N vaccation's terms and conditions 
+            By signng up , you agree to R.P.S.N vaccation's terms and conditions
             and privacy policy.
           </Box>
           <br />
@@ -179,6 +181,7 @@ const Signup = () => {
             alignItems={"center"}
             gap="5px"
             justifyContent={"center"}
+            color="blackAlpha.900"
           >
             Already registered? <Login />
           </Box>
