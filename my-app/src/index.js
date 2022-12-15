@@ -8,6 +8,7 @@ import {ChakraProvider} from '@chakra-ui/react'
 import ShowContextProvider from './Context/ShowContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <ShowContextProvider>
   <ChakraProvider>
     <App />
@@ -28,6 +29,7 @@ root.render(
     </BrowserRouter>
 
   </ShowContextProvider>
+
 );
 
 

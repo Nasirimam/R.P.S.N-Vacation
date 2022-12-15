@@ -1,7 +1,8 @@
 
-import Signup from "./Components/Signup"
-import Login from "./Components/Login"
+
 import './App.css';
+import HomePage from './Home_Page/Main_Page';
+
 
 import "./App.css";
 import "./App.css";
@@ -27,6 +28,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+
 
     <Signup/>
     <Login/>
