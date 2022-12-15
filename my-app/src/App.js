@@ -11,6 +11,7 @@ import { Navbar } from "./Navbar/Navbar";
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./Navbar/HamburgerMenu";
 import Homepage from "./Navbar/Home";
+import Product from './Pakeges/Product';
 
 
 
@@ -34,6 +35,8 @@ function App() {
 
       <Signup/>
     <Login/>
+
+    <Product />
 
     </div>
   );
