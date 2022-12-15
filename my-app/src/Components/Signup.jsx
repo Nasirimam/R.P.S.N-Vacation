@@ -66,18 +66,19 @@ const Signup = () => {
     createUserWithEmailAndPassword(auth, yourEmail, yourPassword)
       .then((res) => {
         setIsAuth(true);
-        // console.log(res)
+        console.log(res)
         alert("Signup Successful !");
         setloading(false);
       })
       .then((err) => {
         setError(err);
+        alert("User Already Registered")
       });
   };
 
   return (
     <>
-      <Box onClick={onOpen} color="#2f9bdb">
+      <Box onClick={onOpen} color="blue">
         Sign Up
       </Box>
       <Modal
@@ -89,7 +90,7 @@ const Signup = () => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Sign Up</ModalHeader>
+          <ModalHeader color="blackAlpha.900">Sign Up</ModalHeader>
           <Button
             backgroundColor="rgb(74,102,160)"
             color="white"
@@ -120,7 +121,7 @@ const Signup = () => {
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google
           </Button>
-          <Box textAlign="center">OR</Box>
+          <Box textAlign="center" color="blackAlpha.900">OR</Box>
 
           <ModalCloseButton />
 
@@ -129,6 +130,7 @@ const Signup = () => {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Full Name</FormLabel>
               <Input
+              color="blackAlpha.900"
                 type="text"
                 placeholder="Full Name"
                 onChange={(e) => setYourName(e.target.value)}
@@ -138,6 +140,7 @@ const Signup = () => {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Enter Email Address</FormLabel>
               <Input
+              color="blackAlpha.900"
                 type="email"
                 placeholder="Enter Email"
                 onChange={(e) => setYourEmail(e.target.value)}
@@ -147,6 +150,7 @@ const Signup = () => {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Enter Password</FormLabel>
               <Input
+              color="blackAlpha.900"
                 type="password"
                 placeholder="Enter Password"
                 onChange={(e) => setYourPassword(e.target.value)}
@@ -181,7 +185,7 @@ const Signup = () => {
             alignItems={"center"}
             gap="5px"
             justifyContent={"center"}
-            color="blackAlpha.900"
+            color="black"
           >
             Already registered? <Login />
           </Box>

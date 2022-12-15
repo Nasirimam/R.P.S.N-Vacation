@@ -59,11 +59,12 @@ function Login() {
         alert("LogIn Successful !");
       })
       .then((error) => { });
+      
   };
 
   return (
     <>
-      <Box onClick={onOpen} color="#2f9bdb">
+      <Box onClick={onOpen} color="blue">
         Log in
       </Box>
 
@@ -76,7 +77,7 @@ function Login() {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Log in</ModalHeader>
+          <ModalHeader color="blackAlpha.900">Log in</ModalHeader>
           <Button
             backgroundColor="rgb(74,102,160)"
             color="white"
@@ -107,12 +108,14 @@ function Login() {
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google
           </Button>
-          <Box textAlign="center">OR</Box>
+          <Box textAlign="center" color="blackAlpha.900">OR</Box>
           <ModalCloseButton />
           <ModalBody pb={6} fontSize="14px">
             <FormControl>
               <FormLabel color="blackAlpha.900" >Email</FormLabel>
               <Input
+              
+              color="blackAlpha.900"
                 ref={initialRef}
                 type="email"
                 placeholder="Enter Email"
@@ -123,6 +126,8 @@ function Login() {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Password</FormLabel>
               <Input
+              
+              color="blackAlpha.900"
                 type="password"
                 placeholder="Enter password"
                 onChange={(e) => setRegisterPassword(e.target.value)}
