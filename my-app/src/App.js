@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import HamburgerMenu from "./Navbar/HamburgerMenu";
 import Homepage from "./Navbar/Home";
 import Footer from "./Footer/Footer";
+import Beach from "./beaches/Beach"
 
 
 
@@ -32,14 +33,12 @@ function App() {
     <div className="App">
       {ham ? <HamburgerMenu /> : <Navbar />}
       < Homepage/>
-
-
-    
-
-
       <Signup/>
     <Login/>
   <Footer/>
+  <Beach/>
+
+ 
 
     </div>
   );

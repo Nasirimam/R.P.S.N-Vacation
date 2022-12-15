@@ -12,8 +12,8 @@ function Footer() {
                 <Box>
                     <Box align={"stretch"}>
                         <Box><Image src='https://cdn1.tripoto.com/assets/2.9/img/logo/header-blue.svg' /></Box>
-                        <Box fontSize="10px" h="10px">India's Largest Travel Community</Box>
-                        <Box mt="1rem" display="flex" gap={1}>
+                        <Box fontSize="10px" h="10px" color={"black"}>India's Largest Travel Community</Box>
+                        <Box mt="1rem" display="flex" gap={1} backgroundColor="black">
                             <a href="https://www.facebook.com/">
                                 <FaFacebookSquare cursor="pointer" size={25} />
                             </a>
@@ -35,57 +35,57 @@ function Footer() {
                         <Box mt="1rem" ml="1rem"><Image cursor="pointer" w="120px" h="60px" src='https://cdn1.tripoto.com/assets/2.9/img/logo/download-android-app.svg' /></Box>
                     </Box>
                 </Box>
-                <Box>
-                    <VStack mt="20px" align='stretch'>
-                        <Box fontWeight="500" fontSize="14px">About Tripoto</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">How It Works</Box>
+                <Box >
+                    <VStack mt="20px" align='stretch' color={"black"}>
+                        <Box fontWeight="500" fontSize="14px" color={"black"}>About Tripoto</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>How It Works</Box>
                         <Link to="">
-                            <Box h="14px" cursor="pointer" fontSize="12px">FAQ’s</Box>
+                            <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>FAQ’s</Box>
                         </Link>
                         <Link to="">
-                            <Box h="14px" cursor="pointer" fontSize="12px">Privacy Policy</Box>
+                            <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Privacy Policy</Box>
                         </Link>
                         <Link to="">
-                            <Box h="14px" cursor="pointer" fontSize="12px">Terms & Conditions</Box>
+                            <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Terms & Conditions</Box>
                         </Link>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Careers</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Contact Us</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Careers</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Contact Us</Box>
                     </VStack>
                 </Box>
                 <Box>
                     <VStack mt="20px" align='stretch'>
-                        <Box fontWeight="500" fontSize="14px">Products</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Tour Packages</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Travel Guides</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Trips & Itineraries</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Weekend Getaways</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Places to Visit</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Other Travel Categories</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Tripoto Forum</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Honeymoon Packages </Box>
+                        <Box fontWeight="500" fontSize="14px" color={"black"}>Products</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Tour Packages</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Travel Guides</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Trips & Itineraries</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Weekend Getaways</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Places to Visit</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Other Travel Categories</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px" color={"black"}>Tripoto Forum</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Honeymoon Packages </Box>
                     </VStack>
                 </Box>
                 <Box>
                     <VStack mt="20px" align='stretch'>
-                        <Box fontWeight="500" fontSize="14px">Important Travel Links</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Goa Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Dubai Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Singapore Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Kerala Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Manali Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Bali Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Sri Lanka Tourism</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Honeymoon Destinations In India </Box>
+                        <Box fontWeight="500" fontSize="14px"  color={"black"}>Important Travel Links</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Goa Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Dubai Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Singapore Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Kerala Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Manali Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Bali Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Sri Lanka Tourism</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Honeymoon Destinations In India </Box>
                     </VStack>
                 </Box>
                 <Box>
                     <VStack mt="20px" align='stretch'>
-                        <Box fontWeight="500" fontSize="14px">Partner Programs</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Buy Travel Leads</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Partner With Us</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Earn Credits</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Get Paid To Travel</Box>
-                        <Box h="14px" cursor="pointer" fontSize="12px">Import Blog To Itinerary</Box>
+                        <Box fontWeight="500" fontSize="14px"  color={"black"}>Partner Programs</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Buy Travel Leads</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Partner With Us</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Earn Credits</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Get Paid To Travel</Box>
+                        <Box h="14px" cursor="pointer" fontSize="12px"  color={"black"}>Import Blog To Itinerary</Box>
                     </VStack>
                 </Box>
             </Box>

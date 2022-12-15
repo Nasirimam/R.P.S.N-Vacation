@@ -1,11 +1,11 @@
 #footer{
     display:  grid;
     margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     grid-template-columns: repeat(5, 1fr);
     width: 90%;
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
   @media screen and (min-width: 1024px) {
     #footer {
