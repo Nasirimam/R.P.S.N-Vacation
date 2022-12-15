@@ -29,8 +29,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {/* {ham ? <HamburgerMenu /> : <Navbar />}
-      < Homepage/> */}
+      {ham ? <HamburgerMenu /> : <Navbar />}
+      < Homepage/>
 
       <Signup/>
     <Login/>
