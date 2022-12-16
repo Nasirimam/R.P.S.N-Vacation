@@ -1,28 +1,28 @@
-import React from "react";
-import styles from "./home_page_img.module.css";
+// import React from "react";
+// import styles from "./home_page_img.module.css";
 
-function HomePage_img() {
-  return (
-    <div className={styles.top_img}>
-      <div className={styles.top_img_div}>
+// function HomePage_img() {
+//   return (
+//     <div className={styles.top_img}>
+//       <div className={styles.top_img_div}>
 
 
-        <h1>India's Largest Community of Travellers</h1>
-        <input
-          type="text"
-          name=""
-          id=""
-          placeholder="Search for itineraries, destinations, hotels,or activities"
+//         <h1>India's Largest Community of Travellers</h1>
+//         <input
+//           type="text"
+//           name=""
+//           id=""
+//           placeholder="Search for itineraries, destinations, hotels,or activities"
          
 
-        />
-        {/* <button></button> */}
+//         />
+//         {/* <button></button> */}
         
-      </div>
-    </div>
-  );
-}
-export default HomePage_img;
+//       </div>
+//     </div>
+//   );
+// }
+// export default HomePage_img;
 
 // import { Box, Heading, Input } from "@chakra-ui/react";
 // import React, { useState } from "react";

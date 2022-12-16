@@ -1,6 +1,12 @@
 
 
 
+import './App.css';
+// import HomePage from './Home_Page/Main_Page';
+import Signup from "./Components/Signup"
+import Login from './Components/Login';
+
+
 
 import "./App.css";
 import { Navbar } from "./Navbar/Navbar";

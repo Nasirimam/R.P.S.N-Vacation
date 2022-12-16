@@ -5,6 +5,7 @@ import "./Homepage.css";
 import { Countries } from "./Countries";
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import HomePage_Component from "../Home_Page_Component/Main_Page";
 
 const Homepage = () => {
     const { show, setShow } = useContext(ShowContext);
@@ -64,7 +65,7 @@ const Homepage = () => {
                 </Box>
             </Box>
             <br />
-            {/* here import home part down part */}
+            <HomePage_Component />
         </div>
     );
 };
