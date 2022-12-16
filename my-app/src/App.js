@@ -15,7 +15,7 @@ import HamburgerMenu from "./Navbar/HamburgerMenu";
 import Homepage from "./Navbar/Home";
 import Footer from "./Footer/Footer";
 import Beach from "./beaches/Beach"
-import HomePage from './Home_Page/Main_Page';
+// import HomePage from './HomePage/Main_Page';
 
 
 
@@ -37,7 +37,7 @@ function App() {
       
    
  <Homepage/>
-  <Beach/>
+  {/* <Beach/> */}
  <Footer/>
  
 
