@@ -6,7 +6,7 @@ import { Countries } from "./Countries";
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import HomePage_Component from "../Home_Page_Component/Main_Page";
-
+import {Home} from "../Pankaj/Home"
 const Homepage = () => {
     const { show, setShow } = useContext(ShowContext);
     const [result, setResults] = useState("");
@@ -34,7 +34,7 @@ const Homepage = () => {
                 <Box position={"relative"} width="100%">
                     <img
                         id="banner"
-                        src="https://ak-d.tripcdn.com/images/1i66w2224teao7wyo344C_W_670_10000.jpg?proc=source/trip"
+                    src="https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg"
                         alt=""
                     />
 
@@ -65,7 +65,8 @@ const Homepage = () => {
                 </Box>
             </Box>
             <br />
-            <HomePage_Component />
+            {/* <HomePage_Component /> */}
+           <Home/>
         </div>
     );
 };

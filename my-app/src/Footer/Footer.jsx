@@ -11,9 +11,9 @@ function Footer() {
             <Box id={style.footer} >
                 <Box>
                     <Box align={"stretch"}>
-                        <Box><Image src='https://cdn1.tripoto.com/assets/2.9/img/logo/header-blue.svg' /></Box>
+                        <Box><Image style={{height:"20px", width:"60px"}} src='https://cdn1.tripoto.com/assets/2.9/img/logo/header-blue.svg' /></Box>
                         <Box fontSize="10px" h="10px" color={"black"}>India's Largest Travel Community</Box>
-                        <Box mt="1rem" display="flex" gap={1} backgroundColor="black">
+                        <Box mt="1rem" display="flex" gap={1} backgroundColor="white">
                             <a href="https://www.facebook.com/">
                                 <FaFacebookSquare cursor="pointer" size={25} />
                             </a>
