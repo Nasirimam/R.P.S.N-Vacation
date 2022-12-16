@@ -14,6 +14,7 @@ import {
   Button,
   Avatar,
   Center,
+  Select,
 } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { useState } from "react";
@@ -22,11 +23,13 @@ const Product = () => {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.nasirReducer.products);
 
-  // const store = useSelector((store) => store);
-
   const [page, setPage] = useState(1);
-
-  console.log(products);
+  const [width, setWidth] = useState(null);
+  const [limit, setLimit] = useState(9);
+  const [sort, setSort] = useState("asc");
+  const [filter, setFilter] = useState(
+    "OYO Total Holidays&brand_name=Destynasia Venture&brand_name=TUI India&brand_name=Tripoto Verified Partner&brand_name=IFLy Vacation PVT Ltd.&brand_name=Explore More Holidays&brand_name=IFLy Vacation PVT Ltd."
+  );
 
   const getProduct = async (url) => {
     return await fetch(url);
@@ -35,15 +38,80 @@ const Product = () => {
   useEffect(() => {
     dispatch(getProductRequest());
     getProduct(
-      `https://fantastic-lab-coat-moth.cyclic.app/Package?_limit=9&_page=${page}`
+      `https://fantastic-lab-coat-moth.cyclic.app/Package?_limit=${limit}&_page=${page}&_sort=price&_order=${sort}&brand_name=${filter}`
     )
       .then((e) => e.json())
       .then((e) => dispatch(getProductSuccess(e)))
       .catch((e) => dispatch(getProductFailed()));
-  }, [page]);
+  }, [page, limit, width, sort, filter]);
+
+  useEffect(() => {
+    setWidth(window.screen.width);
+    if (width < 1280) {
+      setLimit(8);
+    } else {
+      setLimit(9);
+    }
+  }, [limit, width]);
+
+  const handleChange = (e) => {
+    setSort(e.target.value);
+  };
+
+  const handleFilter = (e) => {
+    setFilter(e.target.value);
+  };
 
   return (
-    <Box w={"80%"} margin={"auto"}>
+    <Box w={"100%"}>
+      <Image
+        src="https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg"
+        w={"100%"}
+        mb={5}
+      />
+      <Flex>
+        <Box
+          w={{
+            base: "50%",
+            sm: "40%",
+            md: "30%",
+            xl: "20%",
+            "2xl": "20%",
+          }}
+          ml={"10%"}
+          mb={6}
+        >
+          <Select placeholder="Sort With Price" onChange={handleChange}>
+            <option value="asc">Low To High</option>
+            <option value="desc">High To Low</option>
+          </Select>
+        </Box>
+        <Box
+          w={{
+            base: "50%",
+            sm: "40%",
+            md: "30%",
+            xl: "20%",
+            "2xl": "20%",
+          }}
+          ml={"10%"}
+          mb={6}
+        >
+          <Select placeholder="Filter with Brand" onChange={handleFilter}>
+            <option value="OYO Total Holidays">OYO</option>
+            <option value="Destynasia Venture">Destynasia</option>
+            <option value="TUI India">TUI India</option>
+            <option value="Tripoto Verified Partner">
+              Tripoto Verified Partner
+            </option>
+            <option value="IFLy Vacation PVT Ltd.">
+              IFLy Vacation PVT Ltd.
+            </option>
+            <option value="Explore More Holidays">Explore More Holidays</option>
+            <option value="SFM Travels">SFM Travels</option>
+          </Select>
+        </Box>
+      </Flex>
       <SimpleGrid
         columns={{
           base: 1,
@@ -52,10 +120,18 @@ const Product = () => {
           xl: 3,
           "2xl": 3,
         }}
-        spacing={4}
+        w="80%"
+        margin={"auto"}
+        spacing={5}
       >
         {products.map((elem) => (
-          <Box key={elem.id} border="2px solid red" p={3} borderRadius={5}>
+          <Box
+            key={elem.id}
+            // border="2px solid red"
+            p={3}
+            borderRadius={10}
+            boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
+          >
             <Image src={elem.image} w="100%" h={"50%"} />
             <Box
               fontSize={{
@@ -87,6 +163,7 @@ const Product = () => {
                   "2xl": "md",
                 }}
                 leftIcon={<MdLocationOn />}
+                color={"blue.400"}
               >
                 {elem.location}
               </Button>
@@ -105,6 +182,8 @@ const Product = () => {
                   xl: "md",
                   "2xl": "md",
                 }}
+                bgColor={"blue.300"}
+                _hover={{ bgColor: "blue.300" }}
               >
                 {elem.button}
               </Button>
@@ -137,6 +216,10 @@ const Product = () => {
                   "2xl": "md",
                 }}
                 borderRadius={10}
+                variant="outline"
+                borderColor={"blue.400"}
+                border="1px"
+                color={"blue.400"}
               >
                 Book Now
               </Button>
@@ -146,8 +229,8 @@ const Product = () => {
                 size={{
                   base: "xs",
                   sm: "xs",
-                  md: "md",
-                  xl: "md",
+                  md: "sm",
+                  xl: "sm",
                   "2xl": "md",
                 }}
                 name={elem.brand_name}
@@ -168,17 +251,30 @@ const Product = () => {
           </Box>
         ))}
       </SimpleGrid>
-      <Flex justifyContent={"center"} alignItems={"center"}>
+      <Flex justifyContent={"center"} alignItems={"center"} mt={8} gap={4}>
         <Button
           disabled={page <= 1}
           onClick={() => setPage((prev) => prev - 1)}
+          borderColor={"blue.400"}
+          bgColor={"blue.300"}
         >
           Prev
         </Button>
-        <Button>{page}</Button>
         <Button
-          disabled={products.length != 9}
+          colorScheme="whiteAlpha"
+          bgColor={"whiteAlpha.900"}
+          variant="outline"
+          border="1px"
+          borderColor={"blue.400"}
+          color={"blue.400"}
+        >
+          {page}
+        </Button>
+        <Button
+          disabled={products.length < 8}
           onClick={() => setPage((prev) => prev + 1)}
+          borderColor={"blue.400"}
+          bgColor={"blue.300"}
         >
           Next
         </Button>
