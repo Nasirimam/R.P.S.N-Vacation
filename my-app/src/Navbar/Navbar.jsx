@@ -17,10 +17,36 @@ import { Link, NavLink } from "react-router-dom";
 import { ShowContext } from "../Context/ShowContext";
 import styles from "./Navbar.module.css";
 import image from "../Logo/rb.jpg"
+import Login from "../Components/Login";
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase-config";
+
 export function Navbar() {
   const [color, setColor] = useState(false);
   const { show, setShow } = useContext(ShowContext);
+  const [avatar, setAvatar] = useState("");
+  const [avatarName, setAvatarName] = useState("");
+  const [email, setEmail] = useState("");
+  const { setIsAuth } = useContext(ShowContext);
 
+  onAuthStateChanged(auth, (currentUser) => {
+    setEmail(currentUser.email);
+    setAvatarName(currentUser.displayName);
+    setAvatar(currentUser.photoURL);
+    setIsAuth(true);
+  });
+
+  let name = email.split("@");
+  name = name[0].toUpperCase();
+
+  function logoutUser() {
+    signOut(auth).then((res) => {
+      setEmail("");
+      setAvatarName("");
+      setAvatar("");
+      setIsAuth(false);
+    });
+  }
 
 
   const changeColor = () => {
@@ -97,7 +123,21 @@ export function Navbar() {
             <MenuItem>Import Blog</MenuItem>
           </MenuList>
         </Menu>
-        <NavLink to="">Sign in</NavLink>
+        <Box cursor="pointer" display="flex" alignItems={"center"}>
+          {avatarName || name ? (
+            <div>
+              {" "}
+              <Avatar src={avatar} w="28px" h="28px" mr="3px" />{" "}
+              {avatarName || name}
+              <button style={{ marginLeft: "10px" }} onClick={logoutUser}>
+                {" "}
+                Log Out
+              </button>{" "}
+            </div>
+          ) : (
+            <Login />
+          )}
+        </Box>
       </Box>
     </Box>
   );
