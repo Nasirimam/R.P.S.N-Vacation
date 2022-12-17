@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,8 @@ const Product = () => {
   const [filter, setFilter] = useState(
     "OYO Total Holidays&brand_name=Destynasia Venture&brand_name=TUI India&brand_name=Tripoto Verified Partner&brand_name=IFLy Vacation PVT Ltd.&brand_name=Explore More Holidays&brand_name=IFLy Vacation PVT Ltd."
   );
+
+  const navigate = useNavigate();
 
   const getProduct = async (url) => {
     return await fetch(url);
@@ -60,6 +63,10 @@ const Product = () => {
 
   const handleFilter = (e) => {
     setFilter(e.target.value);
+  };
+
+  const handleGotoSinglePage = (id) => {
+    navigate(`/packages/${id}`);
   };
 
   return (
@@ -220,6 +227,7 @@ const Product = () => {
                 borderColor={"blue.400"}
                 border="1px"
                 color={"blue.400"}
+                onClick={() => handleGotoSinglePage(elem.id)}
               >
                 Book Now
               </Button>
