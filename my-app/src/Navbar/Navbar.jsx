@@ -16,7 +16,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ShowContext } from "../Context/ShowContext";
 import styles from "./Navbar.module.css";
-import image from "../Logo/rb.jpg"
+import image from "../Logo/pro.webp";
 import Login from "../Components/Login";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase-config";
@@ -48,7 +48,6 @@ export function Navbar() {
     });
   }
 
-
   const changeColor = () => {
     if (window.scrollY > 100) {
       setShow(true);
@@ -71,7 +70,7 @@ export function Navbar() {
     >
       <Box>
         <NavLink to="/">
-          <Image width="100px" height="30px" src={image} />
+          <Image width="100px" height="60px" src={image} />
           {/* https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg */}
         </NavLink>
       </Box>
@@ -82,7 +81,7 @@ export function Navbar() {
             transition="all 0.5s ease-out"
             bg="white"
             placeholder="Search for itineraries, destinations, hotels or activities"
-            width="500px"
+            width="300px"
             height="30px"
           />
         )}
@@ -91,7 +90,7 @@ export function Navbar() {
         <Menu>
           <MenuButton as={Box}>Inspiration </MenuButton>
           <MenuList color="black" fontSize="14px">
-            <MenuItem >
+            <MenuItem>
               <NavLink to="/inspiration/singapore">Visit Singapore</NavLink>
             </MenuItem>
             <MenuItem>
@@ -114,7 +113,7 @@ export function Navbar() {
         <Menu>
           <MenuButton as={Box}>Publish trip </MenuButton>
           <MenuList color="black" fontSize="14px">
-            <MenuItem >
+            <MenuItem>
               <NavLink to="">Create New</NavLink>
             </MenuItem>
             <MenuItem>
