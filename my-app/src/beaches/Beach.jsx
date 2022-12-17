@@ -9,6 +9,7 @@ import Topbeach from "./Topbeach";
 import Package from "./Package";
 import Comprehensive from "./Comprehensive"
 import { ShowContext } from "../Context/ShowContext";
+import { Box } from "@chakra-ui/react";
 const Beach = () => {
   const { show, setShow } = useContext(ShowContext)
   const [beachgrid, setBeachgrid] = useState([]);
@@ -94,9 +95,13 @@ const Beach = () => {
 
   return (
     <BeachWrapper>
-      <br />
-      <br />
-      <br />
+      <Box position={"relative"} width="100%">
+        <img
+          id="banner"
+          src="https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg"
+          alt=""
+        />
+      </Box>
       <h1 style={{ color: "black", padding: "5px" }}>Best Beaches Around The World</h1>
       <h3 style={{ color: "GrayText", padding: "20px" }}>The crunch of white sand beneath your feet and the thundering ocean beckoning you into its cool waters. Explore all you need to know about taking a perfect trip to the beach!
       </h3>
