@@ -16,10 +16,15 @@ Tripoto is a travel Booking website, for providing end to end solution to to you
 
 💫Tech & Tools Used :
 ---
-For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS.
+
+For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
+
 For database: Json Server (cyclic).
-Chakra UI (UI Styling Library).
+
+Chakra UI (UI Styling Library) Styled-Components.
+
 For authentication: Google firebase authentication.
+
 ---
  🎥video.webm 
 
