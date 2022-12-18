@@ -26,7 +26,11 @@ Chakra UI (UI Styling Library) Styled-Components.
 For authentication: Google firebase authentication.
 
 ---
-iframe allowfullscreen style="border:none" src="https://clipchamp.com/watch/Zw7Pf6UNdyG/embed" width="640" height="360"></iframe>
+
+
+https://user-images.githubusercontent.com/107506646/208311924-c224a6b2-1ddc-4680-9bb1-1d9169f7a992.mp4
+
+
         
 ---
 Deployed Link : https://ornate-marigold-ad611d.netlify.app/
