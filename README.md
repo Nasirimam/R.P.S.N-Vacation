@@ -26,8 +26,7 @@ Chakra UI (UI Styling Library) Styled-Components.
 For authentication: Google firebase authentication.
 
 ---
- https://user-images.githubusercontent.com/107506646/207723951-c3055143-8df1-4794-8279-62665c0427d0.mp4
-
+ https://clipchamp.com/watch/Zw7Pf6UNdyG
 
 
 ---
