@@ -20,6 +20,7 @@ import image from "../Logo/pro.webp";
 import Login from "../Components/Login";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase-config";
+import AdminLogin from "../AdminPanal/adminLogin";
 
 export function Navbar() {
   const [color, setColor] = useState(false);
@@ -81,8 +82,9 @@ export function Navbar() {
             transition="all 0.5s ease-out"
             bg="white"
             placeholder="Search for itineraries, destinations, hotels or activities"
-            width="300px"
+            width="250px"
             height="30px"
+            color={"blackAlpha.900"}
           />
         )}
       </Box>
@@ -108,7 +110,8 @@ export function Navbar() {
             <MenuItem>Explore More</MenuItem>
           </MenuList>
         </Menu>
-        <NavLink to="#">Forum</NavLink>
+        <AdminLogin />
+
         <NavLink to="/packages">Packages</NavLink>
         <Menu>
           <MenuButton as={Box}>Publish trip </MenuButton>

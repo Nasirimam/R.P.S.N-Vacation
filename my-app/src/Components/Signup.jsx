@@ -41,7 +41,6 @@ const Signup = () => {
   const [error, setError] = useState("");
   const { isAuth, setIsAuth } = useContext(ShowContext);
 
-
   const provider = new GoogleAuthProvider();
 
   const signInWithGoogle = () => {
@@ -54,31 +53,25 @@ const Signup = () => {
       });
   };
 
-
-
-
-
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setloading(true);
     createUserWithEmailAndPassword(auth, yourEmail, yourPassword)
       .then((res) => {
         setIsAuth(true);
-        console.log(res)
+        console.log(res);
         alert("Signup Successful !");
         setloading(false);
       })
       .then((err) => {
         setError(err);
-        alert("User Already Registered")
+        alert("User Already Registered");
       });
   };
 
   return (
     <>
-      <Box onClick={onOpen} color="blue">
+      <Box onClick={onOpen} color="red.500">
         Sign Up
       </Box>
       <Modal
@@ -121,16 +114,17 @@ const Signup = () => {
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google
           </Button>
-          <Box textAlign="center" color="blackAlpha.900">OR</Box>
+          <Box textAlign="center" color="blackAlpha.900">
+            OR
+          </Box>
 
           <ModalCloseButton />
 
           <ModalBody pb={6}>
-
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Full Name</FormLabel>
               <Input
-              color="blackAlpha.900"
+                color="blackAlpha.900"
                 type="text"
                 placeholder="Full Name"
                 onChange={(e) => setYourName(e.target.value)}
@@ -140,7 +134,7 @@ const Signup = () => {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Enter Email Address</FormLabel>
               <Input
-              color="blackAlpha.900"
+                color="blackAlpha.900"
                 type="email"
                 placeholder="Enter Email"
                 onChange={(e) => setYourEmail(e.target.value)}
@@ -150,7 +144,7 @@ const Signup = () => {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Enter Password</FormLabel>
               <Input
-              color="blackAlpha.900"
+                color="blackAlpha.900"
                 type="password"
                 placeholder="Enter Password"
                 onChange={(e) => setYourPassword(e.target.value)}
@@ -171,8 +165,6 @@ const Signup = () => {
             justifyContent={"center"}
             margin="auto"
             color="blackAlpha.900"
-
-
           >
             By signng up , you agree to R.P.S.N vaccation's terms and conditions
             and privacy policy.

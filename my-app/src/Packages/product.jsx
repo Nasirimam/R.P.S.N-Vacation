@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getProductFailed,
@@ -15,10 +15,12 @@ import {
   Avatar,
   Center,
   Select,
+  useToast,
 } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ShowContext } from "../Context/ShowContext";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -33,6 +35,8 @@ const Product = () => {
   );
 
   const navigate = useNavigate();
+  const { isAuth } = useContext(ShowContext);
+  const toast = useToast();
 
   const getProduct = async (url) => {
     return await fetch(url);
@@ -66,7 +70,17 @@ const Product = () => {
   };
 
   const handleGotoSinglePage = (id) => {
-    navigate(`/packages/${id}`);
+    if (isAuth) {
+      navigate(`/packages/${id}`);
+    } else {
+      toast({
+        title: "Your Are Not Logged In",
+        description: "Please Login To Go To Cart",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
