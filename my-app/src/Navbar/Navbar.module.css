@@ -2,8 +2,8 @@
     display: flex;
     color: white;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
@@ -20,14 +20,14 @@
 }
 
 .navSearch {
-    margin-left: -200px;
+    margin-left: -100px;
     border-radius: 2px;
     font-size: 20px;
 }
-#navbar:hover{
+/* #navbar:hover{
     background-color: rgb(255, 255, 0);
     color: rgb(206, 11, 11);
-}
+} */
 @media (max-width) {
     .navSearch {
         display: none;

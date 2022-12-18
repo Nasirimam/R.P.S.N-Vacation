@@ -58,13 +58,12 @@ function Login() {
         setIsAuth(true);
         alert("LogIn Successful !");
       })
-      .then((error) => { });
-      
+      .then((error) => {});
   };
 
   return (
     <>
-      <Box onClick={onOpen} color="blue">
+      <Box onClick={onOpen} color={"whiteAlpha.900"}>
         Log in
       </Box>
 
@@ -108,14 +107,15 @@ function Login() {
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google
           </Button>
-          <Box textAlign="center" color="blackAlpha.900">OR</Box>
+          <Box textAlign="center" color="blackAlpha.900">
+            OR
+          </Box>
           <ModalCloseButton />
           <ModalBody pb={6} fontSize="14px">
             <FormControl>
-              <FormLabel color="blackAlpha.900" >Email</FormLabel>
+              <FormLabel color="blackAlpha.900">Email</FormLabel>
               <Input
-              
-              color="blackAlpha.900"
+                color="blackAlpha.900"
                 ref={initialRef}
                 type="email"
                 placeholder="Enter Email"
@@ -126,8 +126,7 @@ function Login() {
             <FormControl mt={4}>
               <FormLabel color="blackAlpha.900">Password</FormLabel>
               <Input
-              
-              color="blackAlpha.900"
+                color="blackAlpha.900"
                 type="password"
                 placeholder="Enter password"
                 onChange={(e) => setRegisterPassword(e.target.value)}

@@ -11,9 +11,11 @@ import {
   Center,
   Square,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -21,19 +23,55 @@ const ConfirmButton = ({ data, formData }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
   const navigate = useNavigate();
+  const toast = useToast();
 
-  const handlePostRequest = () => {
-    console.log(formData);
+  const pro = data.id;
+
+  const intUserDetail = {
+    name: formData.name,
+    email: formData.email,
+    contect: formData.number,
+    city: formData.city,
+    people: formData.people,
+    children: formData.children,
+    room: formData.room,
+    date: formData.date,
+    packegeID: pro,
+  };
+
+  const orderdone = async (url, data) => {
+    try {
+      return await axios.post(url, data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const [userData, setUserData] = useState(null);
+
+  const handleClickCofirm = () => {
+    setUserData({ ...intUserDetail, packegeID: pro });
   };
 
   const handleClickonYes = () => {
-    navigate("/packages");
+    orderdone(`https://powerful-lingerie-fawn.cyclic.app/booking`, userData)
+      .then((e) => console.log(e))
+      .then((e) =>
+        toast({
+          title: "Package Added.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        })
+      )
+      .then(() => navigate("/packages"))
+      .catch((e) => console.log(e));
   };
 
   return (
     <>
       <Button
-        onClick={() => (onOpen(), handlePostRequest())}
+        onClick={() => (onOpen(), handleClickCofirm())}
         w={"90%"}
         h={"50px"}
         fontSize={20}
@@ -73,7 +111,6 @@ const ConfirmButton = ({ data, formData }) => {
             </Box>
             <Box fontSize={16} fontWeight={"semibold"}>
               <span style={{ color: "#3182CE" }}>Email : </span>
-
               {formData.email}
             </Box>
             <Box fontSize={16} fontWeight={"semibold"}>

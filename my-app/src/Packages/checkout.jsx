@@ -99,7 +99,7 @@ const Checkout = ({ data }) => {
         />
         <Input
           width="90%"
-          placeholder="Contect Number"
+          placeholder="Contact Number"
           name="number"
           isRequired
           onChange={handleChange}
