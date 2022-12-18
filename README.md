@@ -15,7 +15,7 @@ This is a collaborative Project from Masai School in the Construct Week. We are 
 Tripoto is a travel Booking website, for providing end to end solution to to your travelling by making your bookings handy.
 
 💫Tech & Tools Used :
----🎥video.webm 
+--- 
 
 For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
 
@@ -26,7 +26,8 @@ Chakra UI (UI Styling Library) Styled-Components.
 For authentication: Google firebase authentication.
 
 ---
- https://clipchamp.com/watch/Zw7Pf6UNdyG.mp4
+🎥video.webm
+ https://clipchamp.com/watch/Zw7Pf6UNdyG
 
 
 ---
