@@ -2,7 +2,7 @@
 ---
 This is a collaborative Project from Masai School in the Construct Week. We are 4 members of the team:
 
-1. Pankaj Singh : Team Lead
+1. Pankaj Singh 
 
 2. Nasir Imam
 
@@ -15,7 +15,7 @@ This is a collaborative Project from Masai School in the Construct Week. We are 
 Tripoto is a travel Booking website, for providing end to end solution to to your travelling by making your bookings handy.
 
 💫Tech & Tools Used :
----
+--- 
 
 For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
 
@@ -26,10 +26,12 @@ Chakra UI (UI Styling Library) Styled-Components.
 For authentication: Google firebase authentication.
 
 ---
- 🎥video.webm 
 
 
+https://user-images.githubusercontent.com/107506646/208311924-c224a6b2-1ddc-4680-9bb1-1d9169f7a992.mp4
 
+
+        
 ---
 Deployed Link : https://ornate-marigold-ad611d.netlify.app/
 
