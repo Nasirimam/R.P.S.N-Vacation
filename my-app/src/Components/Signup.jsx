@@ -29,6 +29,7 @@ import {
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import Login from "./Login";
+import { Navigate } from "react-router-dom";
 
 const Signup = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -41,17 +42,17 @@ const Signup = () => {
   const [error, setError] = useState("");
   const { isAuth, setIsAuth } = useContext(ShowContext);
 
-  const provider = new GoogleAuthProvider();
+  // const provider = new GoogleAuthProvider();
 
-  const signInWithGoogle = () => {
-    signInWithPopup(auth, provider)
-      .then((res) => {
-        setIsAuth(true);
-      })
-      .catch((error) => {
-        alert("Try again");
-      });
-  };
+  // const signInWithGoogle = () => {
+  //   signInWithPopup(auth, provider)
+  //     .then((res) => {
+  //       setIsAuth(true);
+  //     })
+  //     .catch((error) => {
+     
+  //     });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -61,11 +62,11 @@ const Signup = () => {
         setIsAuth(true);
         console.log(res);
         alert("Signup Successful !");
+        <Navigate to="/Login" />;
         setloading(false);
       })
-      .then((err) => {
-        setError(err);
-        alert("User Already Registered");
+      .catch((err) => {
+       
       });
   };
 
@@ -109,7 +110,7 @@ const Signup = () => {
             margin="auto"
             marginTop="5px"
             marginBottom="5px"
-            onClick={signInWithGoogle}
+            // onClick={signInWithGoogle}
           >
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google
