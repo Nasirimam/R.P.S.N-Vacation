@@ -6,7 +6,7 @@ This is a collaborative Project from Masai School in the Construct Week. We are 
 
 2. Nasir Imam
 
-3. Shikha Gupta
+3. Shashank Sinha
 
 4. Rahul Singh
 
@@ -17,7 +17,7 @@ Tripoto is a travel Booking website, for providing end to end solution to to you
 💫Tech & Tools Used :
 --- 
 
-For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
+For Frontend : HTML5, CSS3, Javascript, ES6, ReactJS Redux.
 
 For database: Json Server (cyclic).
 
