@@ -1,6 +1,6 @@
 ✨Tripoto-Clone✨
 ---
-This is a collaborative Project from Masai School in the Construct Week. We are 4 members of the team:
+This is a collaborative Project from Masai School in the Construct Week. We are 5 members of the team:
 
 1. Pankaj Singh 
 
