@@ -26,6 +26,16 @@ Chakra UI (UI Styling Library) Styled-Components.
 For authentication: Google firebase authentication.
 
 ---
+ | Serial No            | Feature                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| 1 | User signup and Login |
+| 2 | Products Page with Filter and Sort Functionalities |
+| 3 | Dynamic add to cart and Wishlist feature |
+| 4 | Dynamic cart page and wishlist page using userId |
+| 5 | Admin Login & Page |
+| 6 | Dummy payment using UPI-Paytm |
+
+---
 
 
 https://user-images.githubusercontent.com/107506646/208311924-c224a6b2-1ddc-4680-9bb1-1d9169f7a992.mp4
