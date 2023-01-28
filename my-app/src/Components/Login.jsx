@@ -32,15 +32,23 @@ import {
 import Signup from "./Signup";
 
 function Login() {
+  //this is for popup window
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  //this is login input refrence
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
+
+  //this contain email and password of user
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
+  //for authentication
   const { isAuth, setIsAuth } = useContext(ShowContext);
 
   const provider = new GoogleAuthProvider();
+
+  //this is a login function
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
@@ -102,7 +110,8 @@ function Login() {
             margin="auto"
             marginTop="5px"
             marginBottom="5px"
-            onClick={signInWithGoogle}
+            // onClick={signInWithGoogle}
+            _hover={"none"}
           >
             <FcGoogle style={{ paddingRight: "5px" }} size={28} />
             Log in with google

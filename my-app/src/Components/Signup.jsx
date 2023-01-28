@@ -32,27 +32,26 @@ import Login from "./Login";
 import { Navigate } from "react-router-dom";
 
 const Signup = () => {
+  //this is for popup window
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  //this is login input refrence
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
+
+  //this contain email, password and name of users
   const [yourEmail, setYourEmail] = useState("");
   const [yourPassword, setYourPassword] = useState("");
   const [yourName, setYourName] = useState("");
+
+  //this contain loding and error
   const [loading, setloading] = useState(false);
   const [error, setError] = useState("");
+
+  //for authentication
   const { isAuth, setIsAuth } = useContext(ShowContext);
 
-  // const provider = new GoogleAuthProvider();
-
-  // const signInWithGoogle = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((res) => {
-  //       setIsAuth(true);
-  //     })
-  //     .catch((error) => {
-     
-  //     });
-  // };
+  //This Is a signup function
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,9 +64,7 @@ const Signup = () => {
         <Navigate to="/Login" />;
         setloading(false);
       })
-      .catch((err) => {
-       
-      });
+      .catch((err) => {});
   };
 
   return (
@@ -167,7 +164,7 @@ const Signup = () => {
             margin="auto"
             color="blackAlpha.900"
           >
-            By signng up , you agree to R.P.S.N vaccation's terms and conditions
+            By signing up, you agree to R.P.S.N vaccation's terms and conditions
             and privacy policy.
           </Box>
           <br />
