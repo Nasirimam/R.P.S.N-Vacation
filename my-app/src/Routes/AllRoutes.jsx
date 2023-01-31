@@ -5,6 +5,7 @@ import Homepage from "../Navbar/Home";
 import Product from "../Packages/product";
 import SinglePage from "../Packages/singlepage";
 import PrivateRoute from "../Components/PrivateRoute";
+import { Center, Heading } from "@chakra-ui/react";
 
 const AllRoutes = () => {
   return (
@@ -14,6 +15,14 @@ const AllRoutes = () => {
       <Route path="/inspiration/beach" element={<Beach />} />
       <Route path="/packages/:id" element={<SinglePage />} />
       <Route path="/admin" element={<Admin />} />
+      <Route
+        path="*"
+        element={
+          <Center>
+            <Heading>Page Does Not Exist</Heading>
+          </Center>
+        }
+      />
     </Routes>
   );
 };

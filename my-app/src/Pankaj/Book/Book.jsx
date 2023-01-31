@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./Book.module.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -69,6 +70,13 @@ export const Book = () => {
       },
     ],
   };
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/packages");
+  };
+
   return (
     <div>
       <div>
@@ -99,7 +107,9 @@ export const Book = () => {
                     ₹ 8500 <span className={styles.per}> / person </span>
                   </span>
                 </div>
-                <div className={styles.smbox}>Get Quotes</div>
+                <div className={styles.smbox} onClick={handleClick}>
+                  Get Quotes
+                </div>
               </div>
             </div>
 
@@ -154,6 +164,7 @@ export const Book = () => {
                 <div
                   className={styles.smbox}
                   style={{ marginRight: "5.4rem", color: "black" }}
+                  onClick={handleClick}
                 >
                   Get Quotes
                 </div>
@@ -202,7 +213,11 @@ export const Book = () => {
                     ₹ 8500 <span className={styles.per}> / person </span>
                   </span>
                 </div>
-                <div className={styles.smbox} style={{ marginRight: "3.4rem" }}>
+                <div
+                  className={styles.smbox}
+                  style={{ marginRight: "3.4rem" }}
+                  onClick={handleClick}
+                >
                   Get Quotes
                 </div>
               </div>
@@ -245,7 +260,11 @@ export const Book = () => {
                     ₹ 8500 <span className={styles.per}> / person </span>
                   </span>
                 </div>
-                <div className={styles.smbox} style={{ marginRight: "6rem" }}>
+                <div
+                  className={styles.smbox}
+                  style={{ marginRight: "6rem" }}
+                  onClick={handleClick}
+                >
                   Get Quotes
                 </div>
               </div>
@@ -290,7 +309,11 @@ export const Book = () => {
                     ₹ 8500 <span className={styles.per}> / person </span>
                   </span>
                 </div>
-                <div className={styles.smbox} style={{ marginRight: "4rem" }}>
+                <div
+                  className={styles.smbox}
+                  style={{ marginRight: "4rem" }}
+                  onClick={handleClick}
+                >
                   Get Quotes
                 </div>
               </div>
@@ -333,7 +356,11 @@ export const Book = () => {
                     ₹ 8500 <span className={styles.per}> / person </span>
                   </span>
                 </div>
-                <div className={styles.smbox} style={{ marginRight: "1rem" }}>
+                <div
+                  className={styles.smbox}
+                  style={{ marginRight: "1rem" }}
+                  onClick={handleClick}
+                >
                   Get Quotes
                 </div>
               </div>
